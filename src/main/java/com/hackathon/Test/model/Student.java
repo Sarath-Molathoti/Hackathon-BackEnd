@@ -17,7 +17,8 @@ public class Student {
 	private Long age;
 	private String collegeName;
 	private BigDecimal cgpa;
-	private Long score;
+	private Long aptitudeScore;
+	private Long codingScore;
 	private Long mobile;
 	private String address;
 	
@@ -26,7 +27,7 @@ public class Student {
 	}
 
 	public Student(String name, String emailId, String password, Long age, String collegeName, BigDecimal cgpa,
-			Long score, Long mobile, String address) {
+			Long aptitudeScore, Long codingScore, Long mobile, String address) {
 		super();
 		this.name = name;
 		this.emailId = emailId;
@@ -34,9 +35,27 @@ public class Student {
 		this.age = age;
 		this.collegeName = collegeName;
 		this.cgpa = cgpa;
-		this.score = score;
+		this.aptitudeScore = aptitudeScore;
+		this.codingScore = codingScore;
 		this.mobile = mobile;
 		this.address = address;
+	}
+
+
+	public Long getAptitudeScore() {
+		return aptitudeScore;
+	}
+
+	public void setAptitudeScore(Long aptitudeScore) {
+		this.aptitudeScore = aptitudeScore;
+	}
+
+	public Long getCodingScore() {
+		return codingScore;
+	}
+
+	public void setCodingScore(Long codingScore) {
+		this.codingScore = codingScore;
 	}
 
 	public Long getStudentId() {
@@ -91,13 +110,6 @@ public class Student {
 		this.cgpa = cgpa;
 	}
 
-	public Long getScore() {
-		return score;
-	}
-
-	public void setScore(Long score) {
-		this.score = score;
-	}
 
 	public Long getMobile() {
 		return mobile;

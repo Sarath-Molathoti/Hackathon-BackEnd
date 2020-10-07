@@ -43,4 +43,29 @@ public class StudentService {
 		return studRepository.getStudentScore(email_id);
 	}
 
+	public Student getDetailsByEmail(String email_id) {
+		// TODO Auto-generated method stub
+		return studRepository.getDetailsByEmail(email_id);
+	}
+
+	public long getAptitudeScoreByEmail(String email_id) {
+		// TODO Auto-generated method stub
+		return studRepository.getAptitudeScoreByEmail(email_id);
+	}
+
+	public long getCodingScoreByEmail(String email_id) {
+		// TODO Auto-generated method stub
+		return studRepository.getCodingScoreByEmail(email_id);
+	}
+
+	public void updateAptitudeScore(String email_id, Long score) {
+		// TODO Auto-generated method stub
+		studRepository.updateAptitudeScore(email_id,score);
+		
+	}
+	
+	public void updateCodingScore(String email_id, Long score) {
+		studRepository.updateCodingScore(email_id,score);
+	}
+
 }
