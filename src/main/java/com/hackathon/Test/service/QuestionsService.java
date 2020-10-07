@@ -26,4 +26,12 @@ public class QuestionsService {
 		return qnsRepository.getCodingQuestions("Coding");
 	}
 
+	public void addQuestion(Questions question) {
+		long question_id = qnsRepository.getCount();
+		question_id = question_id + 1;
+		// TODO Auto-generated method stub
+		qnsRepository.saveQn(question_id,question.getQuestion(),question.getOption1(),question.getOption2(),question.getOption3(),question.getOption4(), question.getAnswer(),question.getQuestionType());
+		
+	}
+
 }
