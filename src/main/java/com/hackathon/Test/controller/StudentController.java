@@ -57,9 +57,14 @@ public class StudentController {
 		return studService.getStudentScore(email_id);
 	}
 	
-	@GetMapping(path="/{email_id}")
+	@GetMapping(path="/{email_id}/get_details_by_email")
 	public Student getDetailsByEmail(@PathVariable String email_id) {
 		return studService.getDetailsByEmail(email_id);
+	}
+	
+	@GetMapping(path="/{student_id}")
+	public Student getDetailsByStudentId(@PathVariable Long student_id) {
+		return studService.getDetailsByStudentId(student_id);
 	}
 	
 	@GetMapping(path="/{email_id}/get_aptitude_score")

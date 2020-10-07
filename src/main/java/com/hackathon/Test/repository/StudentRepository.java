@@ -37,5 +37,8 @@ public interface StudentRepository extends JpaRepository<Student, Long>{
 	@Query(value="UPDATE student SET coding_score=?2 WHERE email_id=?1 ", nativeQuery = true)
 	void updateCodingScore(String email_id, Long score);
 
+	@Query(value="SELECT * FROM student WHERE student_id=?1 ", nativeQuery = true)
+	Student getDetailsByStudentId(Long student_id);
+
 
 }

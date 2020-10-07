@@ -68,4 +68,9 @@ public class StudentService {
 		studRepository.updateCodingScore(email_id,score);
 	}
 
+	public Student getDetailsByStudentId(Long student_id) {
+		// TODO Auto-generated method stub
+		return studRepository.getDetailsByStudentId(student_id);
+	}
+
 }
