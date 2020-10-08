@@ -89,4 +89,10 @@ public class StudentService {
 		return studRepository.getStudentsByCgpa();
 	}
 
+	public long getEmailCount(String email_id) {
+		// TODO Auto-generated method stub
+		return studRepository.getEmailCount(email_id);
+		
+	}
+
 }

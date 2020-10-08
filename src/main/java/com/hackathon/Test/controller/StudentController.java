@@ -39,6 +39,17 @@ public class StudentController {
 		}
 	}
 	
+	//get email count
+	@GetMapping(path="/{email_id}/get_email_count")
+	public boolean getEmailCount(@PathVariable String email_id) {
+		long c = studService.getEmailCount(email_id);
+		if(c>=1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 	//To get all students score along with their details
 	@GetMapping(path="/get_all_student_scores")
 	public List<Student> findStudentsScores(){

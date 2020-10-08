@@ -51,5 +51,8 @@ public interface StudentRepository extends JpaRepository<Student, Long>{
 	@Query(value="SELECT * FROM student ORDER BY cgpa DESC ", nativeQuery = true)
 	List<Student> getStudentsByCgpa();
 
+	@Query(value="SELECT COUNT(*) FROM student WHERE email_id=?1 ", nativeQuery = true)
+	long getEmailCount(String email_id);
+
 
 }
