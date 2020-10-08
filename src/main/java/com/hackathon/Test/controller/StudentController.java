@@ -86,5 +86,23 @@ public class StudentController {
     public void updateCodingScore(@PathVariable String email_id,@PathVariable Long score, @RequestBody Student student) {
     	studService.updateCodingScore(email_id,score);
     }
+    
+    //get students by aptitude score
+    @GetMapping(path="/get_students_by_aptitude_score")
+    public List<Student> getStudentsByAptitudeScore(){
+    	return studService.getStudentsByAptitudeScore();
+    }
 
+    //get Students by coding score
+    @GetMapping(path="/get_students_by_coding_score")
+    public List<Student> getStudentsByCodingScore(){
+    	return studService.getStudentsByCodingScore();
+    }
+    
+    //get students by cgpa
+    @GetMapping(path="/get_students_by_cgpa")
+    public List<Student> getStudentsByCgpa(){
+    	return studService.getStudentsByCgpa();
+    }
+    
 }

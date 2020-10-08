@@ -1,5 +1,7 @@
 package com.hackathon.Test.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -39,6 +41,15 @@ public interface StudentRepository extends JpaRepository<Student, Long>{
 
 	@Query(value="SELECT * FROM student WHERE student_id=?1 ", nativeQuery = true)
 	Student getDetailsByStudentId(Long student_id);
+
+	@Query(value="SELECT * FROM student ORDER BY aptitude_score DESC ", nativeQuery = true)
+	List<Student> getStudentsByAptitudeScore();
+
+	@Query(value="SELECT * FROM student ORDER BY coding_score DESC ", nativeQuery = true)
+	List<Student> getStudentsByCodingScore();
+
+	@Query(value="SELECT * FROM student ORDER BY cgpa DESC ", nativeQuery = true)
+	List<Student> getStudentsByCgpa();
 
 
 }

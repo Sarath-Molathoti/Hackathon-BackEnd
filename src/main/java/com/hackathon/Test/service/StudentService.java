@@ -73,4 +73,20 @@ public class StudentService {
 		return studRepository.getDetailsByStudentId(student_id);
 	}
 
+	public List<Student> getStudentsByAptitudeScore() {
+		// TODO Auto-generated method stub
+		return studRepository.getStudentsByAptitudeScore();
+	}
+
+	public List<Student> getStudentsByCodingScore() {
+		// TODO Auto-generated method stub
+		return studRepository.getStudentsByCodingScore();
+
+	}
+
+	public List<Student> getStudentsByCgpa() {
+		// TODO Auto-generated method stub
+		return studRepository.getStudentsByCgpa();
+	}
+
 }
